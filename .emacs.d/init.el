@@ -1,4 +1,13 @@
 ;; .emacs
+;; Code here influenced by
+;; https://github.com/technomancy/better-defaults
+;; http://whattheemacsd.com/
+;; http://cxwangyi.wordpress.com/2010/08/21/using-cedet-with-emacs/
+;; http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
+;; http://www.logilab.org/blogentry/173886
+;; http://stackoverflow.com/questions/63421/using-emacs-as-an-ide
+;; http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration
+;; http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'defaults-packages)
