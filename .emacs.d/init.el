@@ -1,44 +1,26 @@
 ;; .emacs
 
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(require 'defaults-packages)
+(require 'defaults-general)
+
+
 (custom-set-variables
- ;; uncomment to always end a file with a newline
- ;'(require-final-newline t)
- ;; uncomment to disable loading of "default.el" at startup
- ;'(inhibit-default-init t)
- ;; default to unified diffs
- '(diff-switches "-u"))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(diff-switches "-u")
+ '(ecb-options-version "2.40"))
 
 ;;; uncomment for CJK utf-8 support for non-Asian users
 ;; (require 'un-define)
 
-(setq url-proxy-services '(("no_proxy" . "telsis\\.local")
-                           ("http" . "127.0.0.1:3128")))
 
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-
-
-
-
-;;; Automatic bootstrap for wanted packages
-(package-initialize)
-
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
-;; Add in your own as you wish:
-(defvar my-packages '(color-theme 
-		      color-theme-monokai
-		      zenburn-theme
-		      ecb)
-  "A list of packages to ensure are installed at launch.")
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
-
-;; Some defaults  (ido-mode t)
+;; Some defaults  
+(global-ede-mode t)
+(semantic-mode 1)
+(ido-mode t)
 (setq ido-enable-flex-matching t)
 
 (menu-bar-mode -1)
@@ -50,4 +32,14 @@
 (require 'color-theme)
 (require 'color-theme-monokai)
 (require 'zenburn-theme)
+(require 'ecb)
+(require 'ecb-autoloads)
 
+
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
