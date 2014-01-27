@@ -19,7 +19,9 @@
 (defvar my-packages '(color-theme 
 		      color-theme-monokai
 		      zenburn-theme
-		      ecb)
+		      ecb
+		      tss
+                      )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

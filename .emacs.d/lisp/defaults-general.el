@@ -21,6 +21,14 @@
     (add-to-list 'ac-sources 'ac-source-gtags)
     (add-to-list 'ac-sources 'ac-source-semantic))
   (add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
+;;; activate and deactivate ecb
+(global-set-key (kbd "C-x C-;") 'ecb-activate)
+(global-set-key (kbd "C-x C-'") 'ecb-deactivate)
+;;; show/hide ecb window
+(global-set-key (kbd "C-;") 'ecb-show-ecb-windows)
+(global-set-key (kbd "C-'") 'ecb-hide-ecb-windows)
+
+(smart-tabs-insinuate 'c 'javascript)
   )
 
 (provide 'defaults-general)

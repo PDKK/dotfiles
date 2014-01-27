@@ -45,6 +45,7 @@
 (require 'ecb-autoloads)
 
 
+(add-to-list 'auto-mode-alist '(".*\\.ts\\'" . typescript-mode))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -52,3 +53,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;;(global-ede-mode nil)
+;; ede java root
+;;(ede-java-root-project "TestGradle"
+;;         :file "~/workspace/testGradle/build.gradle"
+;;         :srcroot '("src" "test"))
